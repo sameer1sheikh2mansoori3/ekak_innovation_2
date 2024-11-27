@@ -3,6 +3,7 @@
 import { useRef, useState, useEffect } from "react"
 import { Card } from "@/components/ui/card"
 import { motion, useMotionValue, useAnimation, useAnimationFrame } from "framer-motion"
+import { BorderBeam } from "./ui/border-beam"
 
 export default function BrandCarousel() {
   const [isDragging, setIsDragging] = useState(false)
@@ -34,7 +35,8 @@ export default function BrandCarousel() {
   })
 
   return (
-    <div className="w-full bg-black p-8">
+    <div className="w-auto  bg-black p-8  h-full">
+<h1 className="text-white text-center my-4 text-4xl font-bold">Our Deals</h1>
       <div className="overflow-hidden" ref={constraintsRef}>
         <motion.div
           ref={carouselRef}
@@ -57,12 +59,14 @@ export default function BrandCarousel() {
               }}
             >
               <Card className="w-full h-full bg-gray-900 border-gray-800 p-6 flex items-center justify-center overflow-hidden">
+
                 <img
                   src={brand}
                   alt={`Brand logo ${(index % brands.length) + 1}`}
                   className="w-full h-full object-contain"
                   draggable="false"
                 />
+                 <BorderBeam />
               </Card>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 hover:opacity-20 transition-opacity duration-300" />
               <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg opacity-0 group-hover:opacity-100 blur transition duration-1000 group-hover:duration-200" />

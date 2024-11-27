@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials"
 import { motion } from "framer-motion"
+import { CardHoverEffectDemo } from './../../components/CardHoverEffectDemo';
 
 const testimonials = [
   {
@@ -115,6 +116,9 @@ export default function TeamPage() {
           </div>
           )}
         </motion.div>
+        <section>
+          <CardHoverEffectDemo/>
+        </section>
       </div>
     </div>
   )

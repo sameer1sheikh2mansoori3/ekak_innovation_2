@@ -1,6 +1,7 @@
 'use client'
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
+import { ThreeDCardDemo } from './../../components/ThreeDCardDemo';
 
 export default function AboutPage () {
   return (
@@ -130,6 +131,35 @@ export default function AboutPage () {
           </p>
         </section>
 
+{/* Section 4: About the Team */}
+<section className="py-20 max-w-6xl text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-3xl font-semibold mb-6"
+          >
+            Some memorable events
+          </motion.h2>
+          <div className="flex flex-col">
+          
+          <div className="flex flex-row justify-center space-x-2">
+            <ThreeDCardDemo title="Oct 2021   3d Printing" description="Ekak began its journey as a specialized 3D printing service, focusing on delivering high-quality prototypes and solutions." urlSection="https://i.all3dp.com/wp-content/uploads/2023/05/01123825/MalkMotta-resin-purple.jpg"/>
+            <ThreeDCardDemo title="May 2019 Atta chakki project"  description="This project aimed at improving their product
+line. The system incorporates modern
+technology, ensuring efficient processing.
+
+"  urlSection="https://wallpapers.com/images/hd/village-girl-pictures-1rfyhw0s42twl4aj.jpg"/>
+           
+          </div>
+          <div className="flex flex-row justify-center space-x-2">
+            <ThreeDCardDemo title="Sept 2018 spi lamp" description="Sagar Energy Solution partners with SABI to offer solar-powered lighting, boosting access to sustainable energy solutions." linkUrl="https://home.ekak.in/gaia" urlSection="https://plus.unsplash.com/premium_photo-1675802755792-a7cfd346b5be?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Ym9hdHxlbnwwfHwwfHx8MA%3D%3D"/>
+            <ThreeDCardDemo title="April 2021 Dev prototyping" description="Dedicated to developing innovative solutions for enhancing road safety through cutting-edge technology" urlSection="https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg?cs=srgb&dl=pexels-mikebirdy-120049.jpg&fm=jpg" linkUrl="https://home.ekak.in/gaia"/>
+           
+          </div>
+          </div>
+         
+        </section>
         {/* Section 5: Contact Us */}
         <section className="py-20 max-w-4xl text-center">
           <motion.h2
