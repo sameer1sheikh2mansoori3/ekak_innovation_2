@@ -5,9 +5,11 @@ import { ThreeDCardDemo } from './../../components/ThreeDCardDemo';
 
 export default function AboutPage () {
   return (
-    <div className="relative min-h-screen bg-black text-white overflow-hidden">
+   
+      <div className="relative  min-h-screen bg-black text-white">
       {/* Background Animation */}
-      <div className="absolute inset-0">
+   <div className="my-24">
+   <div className="absolute inset-0">
         <canvas id="electricity-bg" className="absolute inset-0"></canvas>
       </div>
 
@@ -145,7 +147,7 @@ export default function AboutPage () {
           
           <div className="flex flex-row justify-center space-x-2">
             <ThreeDCardDemo title="Oct 2021   3d Printing" description="Ekak began its journey as a specialized 3D printing service, focusing on delivering high-quality prototypes and solutions." urlSection="https://i.all3dp.com/wp-content/uploads/2023/05/01123825/MalkMotta-resin-purple.jpg"/>
-            <ThreeDCardDemo title="May 2019 Atta chakki project"  description="This project aimed at improving their product
+            <ThreeDCardDemo title="May 2019  chakki project"  description="This project aimed at improving their product
 line. The system incorporates modern
 technology, ensuring efficient processing.
 
@@ -182,7 +184,9 @@ technology, ensuring efficient processing.
           </motion.button>
         </section>
       </div>
+   </div>
     </div>
+   
   );
 };
 

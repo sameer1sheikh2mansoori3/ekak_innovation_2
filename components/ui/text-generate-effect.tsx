@@ -5,7 +5,7 @@ import { motion, stagger, useAnimate } from "framer-motion";
 
 export const TextGenerateEffect = ({ words }: { words: string }) => {
   const [scope, animate] = useAnimate();
-  let wordsArray = words.split(" ");
+  const wordsArray = words.split(" ");
   useEffect(() => {
     animate(
       "span",

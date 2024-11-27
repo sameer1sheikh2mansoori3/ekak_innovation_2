@@ -3,10 +3,9 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Badge } from "@/components/ui/badge"
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Lightbulb, Cpu, Globe, Rocket, Send } from 'lucide-react'
+import { Lightbulb, Cpu, Globe, Rocket,  } from 'lucide-react'
 
 import  Timeline  from '@/components/Timeline';
 import BrandCarousel from './Branding'

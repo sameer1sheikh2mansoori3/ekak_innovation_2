@@ -1,8 +1,8 @@
 "use client"
 
-import { useRef, useState, useEffect } from "react"
+import { useRef, useState } from "react"
 import { Card } from "@/components/ui/card"
-import { motion, useMotionValue, useAnimation, useAnimationFrame } from "framer-motion"
+import { motion, useMotionValue,  useAnimationFrame } from "framer-motion"
 import { BorderBeam } from "./ui/border-beam"
 
 export default function BrandCarousel() {
@@ -11,7 +11,7 @@ export default function BrandCarousel() {
   const constraintsRef = useRef<HTMLDivElement>(null)
   const carouselRef = useRef<HTMLDivElement>(null)
   const x = useMotionValue(0)
-  const controls = useAnimation()
+
 
   const brands = [
     "https://home.ekak.in/1000012564-removebg-preview.png",
