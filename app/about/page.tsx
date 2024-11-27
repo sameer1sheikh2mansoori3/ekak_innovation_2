@@ -6,9 +6,9 @@ import { ThreeDCardDemo } from './../../components/ThreeDCardDemo';
 export default function AboutPage () {
   return (
    
-      <div className="relative  min-h-screen bg-black text-white">
+      <div className="relative  h-auto bg-black text-white">
       {/* Background Animation */}
-   <div className="my-24">
+   <div className="my-20">
    <div className="absolute inset-0">
         <canvas id="electricity-bg" className="absolute inset-0"></canvas>
       </div>
@@ -21,7 +21,7 @@ export default function AboutPage () {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-4xl md:text-6xl font-bold mb-4"
+            className="text-4xl mb-50 md:text-6xl font-bold "
           >
             Welcome to <span className="text-blue-500">EKAK
 

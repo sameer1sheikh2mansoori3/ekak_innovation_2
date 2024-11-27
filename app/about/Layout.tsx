@@ -1,21 +1,11 @@
+import React from 'react'
 
-
-
-
-
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const Layout = ({children}) => {
   return (
-    <html lang="en">
-      <body
-        className={` bg-black border-2 border-red-400`}
-      >
-        {children}
-      </body>
-    </html>
-  );
+    <div className='bg-red-300'>
+      {children}
+    </div>
+  )
 }
+
+export default Layout
