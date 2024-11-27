@@ -94,7 +94,7 @@ export default function AboutPage () {
               {
                 title: "Conversational AI",
                 description:
-                  "Create interactive customer experiences with AI chatbots.",
+                  "Create interactive customer experiences with AI chatbot.",
               },
             ].map((service, index) => (
               <motion.div
@@ -171,7 +171,7 @@ technology, ensuring efficient processing.
             Get in Touch
           </motion.h2>
           <p className="text-lg text-gray-300 leading-relaxed mb-6">
-            Have questions or want to collaborate? Contact us today and let's
+            Have questions or want to collaborate? Contact us today and let&apos;s
             build the future together.
           </p>
           <motion.button
