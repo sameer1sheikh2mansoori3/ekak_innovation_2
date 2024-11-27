@@ -1,195 +1,15 @@
-// 'use client'
-// import {useState} from 'react';
-// import Link from 'next/link'
-// import { motion, AnimatePresence } from 'framer-motion'
-// import { Home, Building2, Lightbulb, BookOpen, ChevronDown, Menu, X } from 'lucide-react'
+'use client';
 
-// const NavItem = ({ href, text, icon: Icon, dropdown = null }) => {
-//   const [isOpen, setIsOpen] = useState(false)
-
-//   return (
-//     <div className="relative group">
-//       <Link
-//         href={href}
-//         className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white flex items-center"
-//         onMouseEnter={() => setIsOpen(true)}
-//         onMouseLeave={() => setIsOpen(false)}
-//       >
-//         <span className="flex items-center ">
-//           {Icon && <Icon className="w-5 h-5 mr-2" />}
-//           {text}
-//           {dropdown && <ChevronDown className="w-4 h-4 ml-1" />}
-//         </span>
-//       </Link>
-//       {dropdown && (
-//         <AnimatePresence>
-//           {isOpen && (
-//             <motion.div
-//               initial={{ opacity: 0, y: -10 }}
-//               animate={{ opacity: 1, y: 0 }}
-//               exit={{ opacity: 0, y: -10 }}
-//               transition={{ duration: 0.2 }}
-//               className="absolute left-0 w-48 py-2 mt-2 bg-gray-800 rounded-md shadow-xl"
-//               onMouseEnter={() => setIsOpen(true)}
-//               onMouseLeave={() => setIsOpen(false)}
-//             >
-//               {dropdown.map((item, index) => (
-//                 <Link
-//                   key={index}
-//                   href={item.href}
-//                   className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
-//                 >
-//                   {item.text}
-//                 </Link>
-//               ))}
-//             </motion.div>
-//           )}
-//         </AnimatePresence>
-//       )}
-//     </div>
-//   )
-// }
-
-// const Navbar = () => {
-//   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-//   const navItems = [
-//     { href: '/', text: 'Home', icon: Home },
-//     {
-//       href: '#',
-//       text: 'Company',
-//       icon: Building2,
-//       dropdown: [
-//         { href: '/about', text: 'About Us' },
-//         { href: '/team', text: 'Our Team' },
-//         { href: '/careers', text: 'Careers' },
-//       ],
-//     },
-//     {
-//       href: '#',
-//       text: 'Solutions',
-//       icon: Lightbulb,
-//       dropdown: [
-//         { href: '/product-a', text: 'Product A' },
-//         { href: '/product-b', text: 'Product B' },
-//         { href: '/product-c', text: 'Product C' },
-//       ],
-//     },
-//     {
-//       href: '#',
-//       text: 'Resources',
-//       icon: BookOpen,
-//       dropdown: [
-//         { href: '/blog', text: 'Blog' },
-//         { href: '/whitepapers', text: 'Whitepapers' },
-//         { href: '/case-studies', text: 'Case Studies' },
-//       ],
-//     },
-//   ]
-
-//   return (
-//     <nav className="bg-gray-900 shadow-md">
-//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//         <div className="flex justify-between h-16">
-//           <div className="flex items-center">
-//             <Link href="/" className="flex-shrink-0 flex items-center">
-//               <svg
-//                 className="h-8 w-8 text-indigo-500"
-//                 fill="none"
-//                 viewBox="0 0 24 24"
-//                 stroke="currentColor"
-//               >
-//                 <path
-//                   strokeLinecap="round"
-//                   strokeLinejoin="round"
-//                   strokeWidth={2}
-//                   d="M13 10V3L4 14h7v7l9-11h-7z"
-//                 />
-//               </svg>
-//               <span className="ml-2 text-xl font-bold text-white">Logo</span>
-//             </Link>
-//           </div>
-//           <div className="hidden md:flex md:items-center md:space-x-4">
-//             {navItems.map((item, index) => (
-//               <NavItem key={index} {...item} />
-//             ))}
-//           </div>
-//           <div className="hidden md:flex md:items-center">
-//             <Link
-//               href="/contact"
-//               className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-//             >
-//               Contact
-//             </Link>
-//           </div>
-//           <div className="flex items-center md:hidden">
-//             <button
-//               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-//               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-//             >
-//               <span className="sr-only">Open main menu</span>
-//               {isMobileMenuOpen ? (
-//                 <X className="block h-6 w-6" aria-hidden="true" />
-//               ) : (
-//                 <Menu className="block h-6 w-6" aria-hidden="true" />
-//               )}
-//             </button>
-//           </div>
-//         </div>
-//       </div>
-//       <AnimatePresence>
-//         {isMobileMenuOpen && (
-//           <motion.div
-//             initial={{ opacity: 0, height: 0 }}
-//             animate={{ opacity: 1, height: 'auto' }}
-//             exit={{ opacity: 0, height: 0 }}
-//             transition={{ duration: 0.3 }}
-//             className="md:hidden bg-gray-800"
-//           >
-//             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-//               {navItems.map((item, index) => (
-//                 <div key={index}>
-//                   <Link
-//                     href={item.href}
-//                     className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700"
-//                   >
-//                     {item.icon && <item.icon className="w-5 h-5 mr-2" />}
-//                     {item.text}
-//                   </Link>
-//                   {item.dropdown && (
-//                     <div className="pl-4 space-y-1">
-//                       {item.dropdown.map((subItem, subIndex) => (
-//                         <Link
-//                           key={subIndex}
-//                           href={subItem.href}
-//                           className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
-//                         >
-//                           {subItem.text}
-//                         </Link>
-//                       ))}
-//                     </div>
-//                   )}
-//                 </div>
-//               ))}
-//             </div>
-//           </motion.div>
-//         )}
-//       </AnimatePresence>
-//     </nav>
-//   )
-// }
-
-// export default Navbar
-
-'use client'
 import React, { useState, useRef, useEffect } from 'react';
-import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Home, Building2, Lightbulb, BookOpen, ChevronDown, Menu, X } from 'lucide-react'
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Home, Building2, Lightbulb, BookOpen, ChevronDown, Menu, X } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
 const NavItem = ({ href, text, icon: Icon, dropdown = null }) => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -211,17 +31,27 @@ const NavItem = ({ href, text, icon: Icon, dropdown = null }) => {
     }
   };
 
+  const isActive = pathname === href;
+
   return (
     <div className="relative group" ref={dropdownRef}>
       <Link
         href={href}
-        className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white flex items-center"
+        className={`px-3 py-2 text-sm font-medium rounded-md flex items-center ${
+          isActive ? 'text-white bg-gray-700' : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+        }`}
         onClick={toggleDropdown}
       >
-        <span className="flex items-center ">
+        <span className="flex items-center">
           {Icon && <Icon className="w-5 h-5 mr-2" />}
           {text}
-          {dropdown && <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-200 ${isOpen ? 'transform rotate-180' : ''}`} />}
+          {dropdown && (
+            <ChevronDown
+              className={`w-4 h-4 ml-1 transition-transform duration-200 ${
+                isOpen ? 'rotate-180' : ''
+              }`}
+            />
+          )}
         </span>
       </Link>
       {dropdown && (
@@ -248,12 +78,12 @@ const NavItem = ({ href, text, icon: Icon, dropdown = null }) => {
         </AnimatePresence>
       )}
     </div>
-  )
-}
+  );
+};
 
 const Navbar = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [activeDropdown, setActiveDropdown] = useState(null)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
 
   const navItems = [
     { href: '/', text: 'Home', icon: Home },
@@ -287,7 +117,7 @@ const Navbar = () => {
         { href: '/case-studies', text: 'Case Studies' },
       ],
     },
-  ]
+  ];
 
   const toggleMobileDropdown = (index) => {
     setActiveDropdown(activeDropdown === index ? null : index);
@@ -312,7 +142,9 @@ const Navbar = () => {
                   d="M13 10V3L4 14h7v7l9-11h-7z"
                 />
               </svg>
-              <span className="ml-2 text-xl font-bold text-white"> <span className="text-blue-500">Ekak</span></span>
+              <span className="ml-2 text-xl font-bold text-white">
+                <span className="text-blue-500">Ekak</span>
+              </span>
             </Link>
           </div>
           <div className="hidden md:flex md:items-center md:space-x-4">
@@ -323,7 +155,7 @@ const Navbar = () => {
           <div className="hidden md:flex md:items-center">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
             >
               Contact
             </Link>
@@ -331,9 +163,8 @@ const Navbar = () => {
           <div className="flex items-center md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700"
             >
-              <span className="sr-only">Open main menu</span>
               {isMobileMenuOpen ? (
                 <X className="block h-6 w-6" aria-hidden="true" />
               ) : (
@@ -352,7 +183,7 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
             className="md:hidden bg-gray-800"
           >
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item, index) => (
                 <div key={index}>
                   <button
@@ -364,7 +195,11 @@ const Navbar = () => {
                       {item.text}
                     </span>
                     {item.dropdown && (
-                      <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-200 ${activeDropdown === index ? 'transform rotate-180' : ''}`} />
+                      <ChevronDown
+                        className={`w-4 h-4 ml-1 transition-transform ${
+                          activeDropdown === index ? 'rotate-180' : ''
+                        }`}
+                      />
                     )}
                   </button>
                   {item.dropdown && activeDropdown === index && (
@@ -372,7 +207,6 @@ const Navbar = () => {
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.2 }}
                       className="pl-4 space-y-1"
                     >
                       {item.dropdown.map((subItem, subIndex) => (
@@ -393,8 +227,7 @@ const Navbar = () => {
         )}
       </AnimatePresence>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
-
+export default Navbar;
