@@ -6,7 +6,9 @@ const Footer = () => {
       <footer className="bg-black text-gray-400 py-8">
         <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <h3 className="text-2xl font-bold text-purple-400 mb-2">NeuraTech AI</h3>
+            <h3 className="text-2xl font-bold  mb-2">
+            <span className="text-blue-500">EKAK</span>
+            </h3>
             <p>Transcending humanity through artificial intelligence</p>
           </div>
           <div className="flex gap-4">

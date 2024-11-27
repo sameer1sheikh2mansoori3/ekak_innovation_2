@@ -312,7 +312,7 @@ const Navbar = () => {
                   d="M13 10V3L4 14h7v7l9-11h-7z"
                 />
               </svg>
-              <span className="ml-2 text-xl font-bold text-white">Logo</span>
+              <span className="ml-2 text-xl font-bold text-white"> <span className="text-blue-500">Ekak</span></span>
             </Link>
           </div>
           <div className="hidden md:flex md:items-center md:space-x-4">

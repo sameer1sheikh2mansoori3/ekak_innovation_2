@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@arwes/react": "^1.0.0-next.24111501",
     "@radix-ui/react-slot": "^1.1.0",
     "@react-spring/web": "^9.7.5",
     "@react-three/drei": "^9.117.3",
@@ -24,12 +25,14 @@
     "next-themes": "^0.4.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-icons": "^5.3.0",
     "react-intersection-observer": "^9.13.1",
     "react-type-animation": "^3.2.0",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.170.0",
-    "three-globe": "^2.35.2"
+    "three-globe": "^2.35.2",
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@types/node": "^20",

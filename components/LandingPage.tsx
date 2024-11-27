@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Brain, Cpu, Globe, Rocket, Send } from 'lucide-react'
+import { Lightbulb , Cpu, Globe, Rocket, Send } from 'lucide-react'
 
 import { motion } from 'framer-motion'
 
@@ -13,6 +13,7 @@ import { motion } from 'framer-motion'
 
 
 import  Timeline from '@/components/Timeline';
+import BrandCarousel from './Branding';
 
 
 export default function LandingPage() {
@@ -23,9 +24,9 @@ export default function LandingPage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-black text-gray-100">
+    <div className="min-h-screen  bg-black text-gray-100">
       {/* Hero Section */}
-      <section className="px-4 py-20 md:py-32 relative overflow-hidden">
+      <section className="px-4 py-20 md:py-32 relative overflow-hidden h-screen flex items-center">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900 to-indigo-900 opacity-20"></div>
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-12">
@@ -69,9 +70,9 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: "Quantum Neural Networks", icon: Brain, description: "We believe renewable energy can transform communities and improve lives. With years of expertise, we specialize in providing innovative green solutions tailored to diverse needs" },
-              { title: "Holographic Data Analysis", icon: Cpu, description: "We offer quick, efficient, and cost-effective product development, from one-of-a-kind prototypes to small production runs and expert consulting." },
-              { title: "Sentient Predictive Engines", icon: Globe, description: "Our products enhance safety in factories and warehouses, improve road safety, and optimize supply chain tracking to prevent accidents, boost productivity, and ensure compliance." }
+                title: "Renewable Energy", icon: Lightbulb, description: "We believe renewable energy can transform communities and improve lives. With years of expertise, we specialize in providing innovative green solutions tailored to diverse needs" },
+              { title: "Product Development", icon: Cpu, description: "We offer quick, efficient, and cost-effective product development, from one-of-a-kind prototypes to small production runs and expert consulting." },
+              { title: "Digital Transformations", icon: Globe, description: "Our products enhance safety in factories and warehouses, improve road safety, and optimize supply chain tracking to prevent accidents, boost productivity, and ensure compliance." }
             ]?.map((feature, index) => (
               <motion.div
                 key={index}
@@ -152,6 +153,10 @@ export default function LandingPage() {
             ))}
           </div>
         </div>
+      </section>
+      {/* branding section */}
+      <section className='px-4 py-16 '>
+        <BrandCarousel/>
       </section>
       <Timeline/>
       {/* Footer */}
