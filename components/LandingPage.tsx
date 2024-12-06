@@ -19,7 +19,7 @@ function useInView(options) {
     if (!ref) return
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setInView(entry.isIntersecting)
+        setInView(entry?.isIntersecting)
       },
       { threshold: 0.3, ...options }
     )
