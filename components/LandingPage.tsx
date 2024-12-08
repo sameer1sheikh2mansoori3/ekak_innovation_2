@@ -9,10 +9,9 @@ import { Lightbulb, Cpu, Globe, Rocket,  } from 'lucide-react'
 
 import  Timeline  from '@/components/Timeline';
 import BrandCarousel from './Branding'
-
 // Intersection Observer Hook
-function useInView(options) {
-  const [ref, setRef] = useState(null)
+function useInView(options: IntersectionObserverInit) {
+  const [ref, setRef] = useState<HTMLElement | null>(null)
   const [inView, setInView] = useState(false)
 
   useEffect(() => {
