@@ -49,9 +49,8 @@ Here are some screenshots of the project:
 * Home Page:
 
 ![Home png](https://github.com/user-attachments/assets/834bfe8b-aeca-4eb6-a9cd-70f36908ab62)
-
 * About Page:
-![About Page}(https://github.com/user-attachments/assets/8cd6a58b-50a1-4ec9-a1e5-add8e0343b56)
+![About png](https://github.com/user-attachments/assets/8cd6a58b-50a1-4ec9-a1e5-add8e0343b56)
 
 
 
