@@ -48,12 +48,12 @@ Here are some screenshots of the project:
 
 * Home Page:
 
-![Home Page](./.next/static/media/home.png.png)
+![Home png](https://github.com/user-attachments/assets/834bfe8b-aeca-4eb6-a9cd-70f36908ab62)
 
 * About Page:
-![About Page](https://user-images.githubusercontent.com/your-username/your-image-id.png)
+![About Page}(https://github.com/user-attachments/assets/8cd6a58b-50a1-4ec9-a1e5-add8e0343b56)
 
-![home png](https://github.com/user-attachments/assets/834bfe8b-aeca-4eb6-a9cd-70f36908ab62)
+
 
 ## Technologies Used
 
@@ -72,6 +72,7 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 
 1. Fork the repository.
 2. Create a new branch for your feature or fix.
+
 3. Make your changes and commit them.
 4. Push your branch to your forked repository.
 5. Create a pull request to merge your branch into the main branch.
