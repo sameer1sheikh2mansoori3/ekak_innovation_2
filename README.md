@@ -48,9 +48,10 @@ Here are some screenshots of the project:
 
 * Home Page:
 
-![Home png](https://github.com/sameer1sheikh2mansoori3/ekak_innovation_2/assets/834bfe8b-aeca-4eb6-a9cd-70f36908ab62)
+![Home png](https://github.com/user-attachments/assets/3fb72045-eb24-4155-b2c4-11cddad1c6d5)
+
 * About Page:
-![About png](https://github.com/sameer1sheikh2mansoori3/ekak_innovation_2/assets/8cd6a58b-50a1-4ec9-a1e5-add8e0343b56)
+![About png](https://github.com/user-attachments/assets/8cd6a58b-50a1-4ec9-a1e5-add8e0343b56)
 
 
 
