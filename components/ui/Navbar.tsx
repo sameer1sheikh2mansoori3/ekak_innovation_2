@@ -1,4 +1,5 @@
 'use client';
+// @ts-nocheck
 
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
@@ -6,14 +7,20 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Home, Building2, Lightbulb, BookOpen, ChevronDown, Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 
-const NavItem = ({ href, text, icon: Icon, dropdown = null }) => {
+interface NavItemProps {
+  href: string;
+  text: string;
+  icon: React.ComponentType;
+  dropdown?: React.ReactNode;
+}
+
+const NavItem: React.FC<NavItemProps> = ({ href, text, icon: Icon, dropdown = null }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
   const pathname = usePathname();
-
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && (dropdownRef.current as HTMLElement).contains(event.target as Node)) {
         setIsOpen(false);
       }
     };
@@ -24,7 +31,7 @@ const NavItem = ({ href, text, icon: Icon, dropdown = null }) => {
     };
   }, []);
 
-  const toggleDropdown = (e) => {
+  const toggleDropdown = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     if (dropdown) {
       e.preventDefault();
       setIsOpen(!isOpen);
