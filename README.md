@@ -47,9 +47,9 @@ You can view a live demo of this project at [https://ekak-innovation-2.vercel.ap
 Here are some screenshots of the project:
 
 * Home Page:
-![Home Page](home.png.png)
+
 ![Home Page](./.next/static/media/home.png.png)
-![Home Page](https://user-images.githubusercontent.com/your-username/your-image-id.png)
+
 * About Page:
 ![About Page](https://user-images.githubusercontent.com/your-username/your-image-id.png)
 
