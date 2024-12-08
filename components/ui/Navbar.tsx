@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 'use client';
 // @ts-nocheck
 
@@ -7,20 +8,25 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Home, Building2, Lightbulb, BookOpen, ChevronDown, Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 
+interface DropdownItem {
+  href: string;
+  text: string;
+}
+
 interface NavItemProps {
   href: string;
   text: string;
-  icon: React.ComponentType;
-  dropdown?: React.ReactNode;
+  icon: React.ComponentType<{ className?: string }>;
+  dropdown?: DropdownItem[];
 }
 
 const NavItem: React.FC<NavItemProps> = ({ href, text, icon: Icon, dropdown = null }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && (dropdownRef.current as HTMLElement).contains(event.target as Node)) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
     };
@@ -90,7 +96,7 @@ const NavItem: React.FC<NavItemProps> = ({ href, text, icon: Icon, dropdown = nu
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
 
   const navItems = [
     { href: '/', text: 'Home', icon: Home },
@@ -126,7 +132,7 @@ const Navbar = () => {
     },
   ];
 
-  const toggleMobileDropdown = (index) => {
+  const toggleMobileDropdown = (index: number) => {
     setActiveDropdown(activeDropdown === index ? null : index);
   };
 
