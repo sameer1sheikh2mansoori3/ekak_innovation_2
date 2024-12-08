@@ -8,11 +8,11 @@ To run this project locally, follow these steps:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/sameer1sheikh2mansoori3/ekak_innovation_2
 ```
 2. Navigate to the project directory:
 ```bash
-cd your-repo-name
+cd ekak_innovation_2
 ```
 3. Install the dependencies:
 ```bash
@@ -48,9 +48,9 @@ Here are some screenshots of the project:
 
 * Home Page:
 
-![Home png](https://github.com/user-attachments/assets/834bfe8b-aeca-4eb6-a9cd-70f36908ab62)
+![Home png](https://github.com/sameer1sheikh2mansoori3/ekak_innovation_2/assets/834bfe8b-aeca-4eb6-a9cd-70f36908ab62)
 * About Page:
-![About png](https://github.com/user-attachments/assets/8cd6a58b-50a1-4ec9-a1e5-add8e0343b56)
+![About png](https://github.com/sameer1sheikh2mansoori3/ekak_innovation_2/assets/8cd6a58b-50a1-4ec9-a1e5-add8e0343b56)
 
 
 
