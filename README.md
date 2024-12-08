@@ -24,6 +24,7 @@ npm run dev
 ```
 This will start the server on `http://localhost:3000`. Open this URL in your browser to view the project.
 
+
 ## Commands
 
 Here are some common commands you might need:
@@ -48,10 +49,10 @@ Here are some screenshots of the project:
 
 * Home Page:
 
-![Home png](https://github.com/user-attachments/assets/3fb72045-eb24-4155-b2c4-11cddad1c6d5)
-
+![Home png](https://github.com/sameer1sheikh2mansoori3/ekak_innovation_2/assets/834bfe8b-aeca-4eb6-a9cd-70f36908ab62)
 * About Page:
-![About png](https://github.com/user-attachments/assets/8cd6a58b-50a1-4ec9-a1e5-add8e0343b56)
+![About png](https://github.com/sameer1sheikh2mansoori3/ekak_innovation_2/assets/8cd6a58b-50a1-4ec9-a1e5-add8e0343b56)
+
 
 
 
@@ -65,6 +66,14 @@ This project uses the following technologies:
 * Tailwind CSS for styling and layout
 * Framer Motion for animations
 * Lucide for icons
+## Upcoming Features
+
+The following features are planned for future releases:
+
+1. **Adding Backend**: Integration of a backend technology to enable dynamic data processing and storage.
+2. **Handling Job Applications**: Implementation of a system to manage job applications, including submission, review, and response processes.
+
+These features will enhance the project's capabilities and provide a more comprehensive user experience.
 
 ## Contributing
 
