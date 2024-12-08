@@ -53,6 +53,7 @@ Here are some screenshots of the project:
 * About Page:
 ![About Page](https://user-images.githubusercontent.com/your-username/your-image-id.png)
 
+![home png](https://github.com/user-attachments/assets/834bfe8b-aeca-4eb6-a9cd-70f36908ab62)
 
 ## Technologies Used
 
