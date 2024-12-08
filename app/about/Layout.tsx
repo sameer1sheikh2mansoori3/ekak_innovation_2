@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 
-const Layout = ({children}) => {
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout = ({children}: LayoutProps) => {
   return (
     <div className='bg-red-300'>
       {children}
