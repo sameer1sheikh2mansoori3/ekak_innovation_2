@@ -47,18 +47,11 @@ You can view a live demo of this project at [https://ekak-innovation-2.vercel.ap
 Here are some screenshots of the project:
 
 * Home Page:
+![Home Page](home.png.png)
 ![Home Page](https://user-images.githubusercontent.com/your-username/your-image-id.png)
 * About Page:
 ![About Page](https://user-images.githubusercontent.com/your-username/your-image-id.png)
 
-## Videos
-
-Here are some videos showcasing the project's features:
-
-* Introduction:
-[![Introduction Video](https://img.youtube.com/vi/your-video-id/0.jpg)](https://www.youtube.com/watch?v=your-video-id)
-* Tutorial:
-[![Tutorial Video](https://img.youtube.com/vi/your-video-id/0.jpg)](https://www.youtube.com/watch?v=your-video-id)
 
 ## Technologies Used
 
