@@ -31,8 +31,8 @@ function useInView(options: IntersectionObserverInit) {
 }
 
 export default function LandingPage() {
-  const heroSection = useInView()
-  const featuresSection = useInView()
+  const heroSection = useInView({})
+  const featuresSection = useInView({})
 
   return (
     <div className="h-auto bg-black text-gray-100">
