@@ -40,7 +40,7 @@ To deploy this project, you can use a service like Vercel or Netlify. These serv
 
 ## Live Demo
 
-You can view a live demo of this project at [https://ekak-innovation-2.vercel.app/m](https://ekak-innovation-2.vercel.app/).
+You can view a live demo of this project at [https://ekak-innovation-2.vercel.app](https://ekak-innovation-2.vercel.app/).
 
 ## Screenshots
 
